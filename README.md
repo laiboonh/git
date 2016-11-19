@@ -1,5 +1,6 @@
 # Git
 
+## General
 ### Initialize Repository
 `git init`
 
@@ -15,6 +16,7 @@ git config --help
 ### Set configuration
 `git config user.name laiboonh`
 
+## Stage
 ### Stage files
 ```
 git add README.md
@@ -24,8 +26,10 @@ git add -A
 `git reset HEAD <file>`
 
 ### Reset changes
-`git checkout README.md`
+`git checkout -- README.md`
 
+
+## Commit
 ### Commit files
 `git commit -m "commit message"`
 
@@ -53,8 +57,19 @@ git commit --amend -m "new message"
 ### Show staged difference since last commit
 `git diff --staged`
 
+
+## Remote
 ### View current remotes
 `git remote-v`
 
-### Push to Github. **origin** is remote name, **master** is the current branch you are trying to push
-`git push -u origin master`
+### Add remote
+`git remote add <name> <address>`
+
+### Remove remote
+`git remote rm <name>`
+
+### Push to Github. -u is used so that you can do git push subsequently without arguments.
+`git push -u <name> <branch>`
+
+### Pull down changes from Github
+`git pull`
